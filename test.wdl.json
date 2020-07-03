@@ -4,5 +4,6 @@
   "rnaSeqQC.bwaMem.refFasta": "/data/HG38_ROOT/hg38_random.fa",
   "rnaSeqQC.picard.refFlat": "/data/HG38_REFFLAT_ROOT/refflat.txt",
   "rnaSeqQC.picard.refFasta": "/data/HG38_ROOT/hg38_random.fa",
-  "rnaSeqQC.picard.modules": "picard/2.21.2"
+  "rnaSeqQC.picard.modules": "picard/2.21.2",
+  "rnaSeqQC.bwaMem.ribosomeIndexRoot": "/data/RNASEQQC_RIBOSOME_GRCH38_BWA_INDEX_ROOT"
 }

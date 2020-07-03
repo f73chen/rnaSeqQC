@@ -66,7 +66,7 @@ workflow rnaSeqQC {
 	    url: "https://broadinstitute.github.io/picard/command-line-overview.html"
 	},
 	{
-	    name: "production-tools-python/2",
+	    name: "production-tools-python/1.1.2",
 	    url: "https://bitbucket.oicr.on.ca/projects/GSI/repos/production-tools-python/"
 	},
 	{
@@ -141,9 +141,6 @@ task bwaMem {
 	Int threads = 4
 	Int jobMemory = 16
 	Int timeout = 4
-
-	# ADDED
-	String ribosomeIndexRoot = "$RNASEQQC_RIBOSOME_GRCH38_BWA_INDEX_ROOT"
     }
 
     parameter_meta {
@@ -174,7 +171,7 @@ task bwaMem {
 	-M \
 	-t 8 \
 	-p \
-	~{ribosomeIndexRoot}/~{rrnaRefName} \
+	$RNASEQQC_RIBOSOME_GRCH38_BWA_INDEX_ROOT/~{rrnaRefName} \
 	- \
 	| \
 	samtools flagstat - > ~{resultName}
