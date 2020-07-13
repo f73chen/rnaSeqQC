@@ -142,7 +142,7 @@ task bwaMem {
 	Int jobMemory = 16
 	Int timeout = 4
 
-	# ADDED
+	# ADDED from the command section
 	String ribosomeIndexRoot = "$RNASEQQC_RIBOSOME_GRCH38_BWA_INDEX_ROOT"
     }
 
